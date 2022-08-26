@@ -1,0 +1,42 @@
+body {
+  overflow-x: auto;
+}
+.main-content {
+    padding-top: 105px;
+    overflow-x: auto;
+    font-size: 16px;
+  }
+  a {
+    text-decoration: none;
+  }
+  .whiteButton {
+    background-color: #fff;
+    color: rgb(9, 168, 197);
+    border: 1px solid rgb(9, 168, 197);
+    font-weight: 700;
+  }
+  .whiteButton:hover {
+    background-color: rgb(9, 168, 197);
+    color: #fff;
+  }
+  .rgbButton {
+    background-color: rgb(9, 168, 197);
+    color: #fff;
+    font-weight: 700;
+  }
+  .rgbButton:hover {
+    background-color: #fff;
+    color: rgb(9, 168, 197);
+    border: 1px solid rgb(9, 168, 197);
+  }
+  ::placeholder {
+    font-size: 12px;
+  }
+  thead {
+    font-size: 14px;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
