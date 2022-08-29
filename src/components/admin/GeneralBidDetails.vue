@@ -1,12 +1,12 @@
 <template>
   <b-button
-    class="align-items-center py-3"
+    class="align-items-center general-btn py-3"
     :class="visible ? null : 'collapsed'"
     :aria-expanded="visible ? 'true' : 'false'"
     aria-controls="general"
     @click="visible = !visible"
     >
-    <i class="fas-solid fa-caret-down float-end"></i>
+    <i class="fa-solid fa-caret-down float-end"></i>
     <p class="text-start fw-bold mb-0">General</p>
   </b-button>
   <b-collapse class="general-bid border border-top-0 px-0" id="general" v-model="visible">
@@ -54,11 +54,11 @@
               <td class="">
                 <div class="d-flex mb-2">
                   <p class="mb-0 fw-bold">Unit:</p>
-                  <span class="mx-3"></span>
+                  <span class="mx-3" contenteditable>{{unit}}</span>
                 </div>
                 <div class="d-flex">
                   <p class="mb-0 fw-bold">Department:</p>
-                  <span class="mx-3"></span>
+                  <span class="mx-3" contenteditable>{{department}}</span>
                 </div>
               </td>
               <td class="">
@@ -94,6 +94,8 @@ export default {
     return {
       format,
       visible: false,
+      unit: '',
+      department: '',
       rfqDesc: ''
     }
   },
@@ -110,7 +112,13 @@ export default {
   font-size: 14px;
   background-color: #fff;
 }
+.rfq-table span {
+  font-size: 13px;
+}
 .general-bid {
   background-color: #f8f8f8;
+}
+.general-btn {
+  background-color: rgb(9, 168, 197);
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <Header></Header>
   <navbar></navbar>
+  <div class="main-content">
+  </div>
 </template>
 
 <script>

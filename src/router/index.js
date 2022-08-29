@@ -29,22 +29,32 @@ const routes = [
   {
     path: '/request-for-quotes',
     name: 'request-for-quotes',
-    component: () => import(/* webpackChunkName: "request-for-quotes" */ '../views/RequestForQuotes.vue')
+    component: () => import(/* webpackChunkName: "request-for-quotes" */ '../views/admin-views/RequestForQuotes.vue')
   },
   {
     path: '/purchase-order',
     name: 'purchase-order',
-    component: () => import(/* webpackChunkName: "purchase-order" */ '../views/PurchaseOrder.vue')
+    component: () => import(/* webpackChunkName: "purchase-order" */ '../views/admin-views/PurchaseOrder.vue')
   },
   {
     path: '/purchase-document',
     name: 'purchase-document',
-    component: () => import(/* webpackChunkName: "purchase-document" */ '../views/PurchaseDocument.vue')
+    component: () => import(/* webpackChunkName: "purchase-document" */ '../views/admin-views/PurchaseDocument.vue')
   },
   {
     path: '/create-new-rfq',
     name: 'create-new-rfq',
     component: () => import(/* webpackChunkName: "create-new-rfq" */ '../views/admin-views/CreateNewRfq.vue')
+  },
+  {
+    path: '/rfq-full-detail',
+    name: 'RfqFullDetail',
+    component: () => import(/* webpackChunkName: "RfqFullDetail" */ '../views/admin-views/RfqFullDetails.vue')
+  },
+  {
+    path: '/vendor-bid-detail',
+    name: 'VendorBidDetail',
+    component: () => import(/* webpackChunkName: "VendorBidDetail" */ '../views/admin-views/VendorBidDetails.vue')
   }
 ]
 
