@@ -42,17 +42,17 @@ const routes = [
     component: () => import(/* webpackChunkName: "purchase-document" */ '../views/admin-views/PurchaseDocument.vue')
   },
   {
-    path: '/create-new-rfq',
+    path: '/request-for-quotes/create-new-rfq',
     name: 'create-new-rfq',
     component: () => import(/* webpackChunkName: "create-new-rfq" */ '../views/admin-views/CreateNewRfq.vue')
   },
   {
-    path: '/rfq-full-detail',
+    path: '/request-for-quotes/rfq-full-detail',
     name: 'RfqFullDetail',
     component: () => import(/* webpackChunkName: "RfqFullDetail" */ '../views/admin-views/RfqFullDetails.vue')
   },
   {
-    path: '/vendor-bid-detail',
+    path: '/request-for-quotes/vendor-bid-detail',
     name: 'VendorBidDetail',
     component: () => import(/* webpackChunkName: "VendorBidDetail" */ '../views/admin-views/VendorBidDetails.vue')
   }

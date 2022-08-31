@@ -4,7 +4,7 @@
   <div class="container-fluid main-content">
     <div class="row">
       <div class=" my-2">
-      <router-link to="/create-new-rfq" class="btn btn-sm whiteButton shadow px-3">
+      <router-link to="/request-for-quotes/create-new-rfq" class="btn btn-sm whiteButton shadow px-3">
         Create New RFQ
       </router-link>
       <button class="btn btn-sm whiteButton shadow mx-4 px-3"
