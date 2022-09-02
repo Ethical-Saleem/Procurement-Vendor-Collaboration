@@ -59,10 +59,10 @@
 <script>
 import Header from '@/components/admin/AdminHeader.vue'
 import Navbar from '@/components/admin/AdminNavBar.vue'
-import pendingRequisition from '@/components/PendingRequisitions.vue'
+import pendingRequisition from '@/components/admin/PendingRequisitions.vue'
 import approvedRequisition from '@/components/ApprovedRequisitions.vue'
 import requisitionsPendingApproval from '@/components/admin/RequisitionsPendingMyApproval.vue'
-import myRequisition from '@/components/MyRequisitions.vue'
+import myRequisition from '@/components/admin/MyRequisitions.vue'
 
 export default {
   name: 'purchase-requisitions',

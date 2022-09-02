@@ -45,7 +45,7 @@
 <script>
 import Header from '@/components/admin/AdminHeader.vue'
 import Navbar from '@/components/admin/AdminNavBar.vue'
-import quoteList from '@/components/QuotesList.vue'
+import quoteList from '@/components/admin/QuotesList.vue'
 import importPermission from '@/components/admin/ImportPermissionForm.vue'
 
 export default {

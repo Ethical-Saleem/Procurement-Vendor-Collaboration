@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import SiteAdmin from '../views/SiteAdministration.vue'
+import SiteAdmin from '../views/admin-views/SiteAdministration.vue'
 import SignIn from '../views/AccountSignin.vue'
+import TeamRequisitions from '../views/user-views/TeamsRequisitions.vue'
 
 const routes = [
   {
@@ -19,12 +20,12 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "vendors-administration" */ '../views/VendorsAdministration.vue')
+    component: () => import(/* webpackChunkName: "vendors-administration" */ '../views/admin-views/VendorsAdministration.vue')
   },
   {
     path: '/purchase-requisitions',
     name: 'purchase-requisitions',
-    component: () => import(/* webpackChunkName: "purchase-requisitions" */ '../views/PurchaseRequisitions.vue')
+    component: () => import(/* webpackChunkName: "purchase-requisitions" */ '../views/admin-views/PurchaseRequisitions.vue')
   },
   {
     path: '/request-for-quotes',
@@ -55,6 +56,19 @@ const routes = [
     path: '/request-for-quotes/vendor-bid-detail',
     name: 'VendorBidDetail',
     component: () => import(/* webpackChunkName: "VendorBidDetail" */ '../views/admin-views/VendorBidDetails.vue')
+  },
+  {
+    path: '/team-requisitions',
+    name: 'team-requisitions',
+    component: TeamRequisitions
+  },
+  {
+    path: '/user-requisitions',
+    name: 'user-requisitions',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "user-requisitions" */ '@/views/user-views/UserRequisitions.vue')
   }
 ]
 

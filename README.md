@@ -1,4 +1,4 @@
-# procurement-admin
+# procurement-vendor-collaboration-portal
 
 ## Project setup
 ```
