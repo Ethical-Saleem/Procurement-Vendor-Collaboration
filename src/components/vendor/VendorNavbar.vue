@@ -10,22 +10,19 @@
         <div class="collapse navbar-collapse" id="sideNav">
           <ul class="navbar-nav w-100 justify-content-between mx-2" id="sideNav">
             <li class="nav-item">
-              <router-link to="/site-administration" class="nav-link fw-bold">SITE ADMINISTRATION</router-link>
+              <router-link :to="{name: 'vendor-dashboard'}" class="nav-link">DASHBOARD</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/vendors-administration" class="nav-link fw-bold">VENDORS</router-link>
+              <router-link to="/vendors-administration" class="nav-link">REQUEST FOR QUOTES</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/purchase-requisitions" class="nav-link fw-bold">PURCHASE REQUISITIONS</router-link>
+              <router-link to="/purchase-requisitions" class="nav-link">PURCHASE ORDER</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/request-for-quotes" class="nav-link fw-bold">REQUEST FOR QUOTES</router-link>
+              <router-link to="/request-for-quotes" class="nav-link">ISSUE RESOLUTION</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/purchase-order" class="nav-link fw-bold">PURCHASE ORDER</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/purchase-document" class="nav-link fw-bold">PURCHASE DOCUMENT</router-link>
+              <router-link to="/purchase-order" class="nav-link">PROFILE</router-link>
             </li>
           </ul>
         </div>
@@ -36,7 +33,7 @@
 
 <script>
 export default {
-  name: 'nav-bar'
+
 }
 </script>
 
@@ -50,16 +47,17 @@ export default {
   z-index: 100;
 }
 .secondNav .navbar {
-  background-color: rgb(218, 218, 218);
+  background-color: rgb(9, 168, 197);
 }
 #sideNav {
-  background-color: rgb(218, 218, 218);
+  background-color: rgb(9, 168, 197);
 }
 #sideNav a.nav-link {
   font-size: 15px;
+  color: rgb(215, 215, 215);
 }
 #sideNav a.router-link-active, #sideNav a.router-link-exact-active {
-  color: rgb(9, 168, 197);
-  border-bottom: 4px solid rgb(9, 168, 197);
+  color: #fff;
+  font-weight: 700;
 }
 </style>

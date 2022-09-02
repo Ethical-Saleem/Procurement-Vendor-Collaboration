@@ -10,6 +10,10 @@
   color: #000;
   font-size: 16px;
 }
+#sideNav a.router-link-active {
+  color: rgb(9, 168, 197);
+  border-bottom: 4px solid rgb(9, 168, 197);
+}
 .main-content {
   padding-top: 105px;
   overflow-x: auto;

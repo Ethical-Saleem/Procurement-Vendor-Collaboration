@@ -4,7 +4,10 @@
       <!-- Container wrapper -->
       <div class="container-fluid h-100">
         <div class="container-fluid w-sm-75 px-0">
-          <slot name="brand"></slot>
+          <span class="navbar-brand text-white"><i class="fa-solid fa-house"></i></span>
+          <span class="navbar-text title text-white">
+            VENDOR COLLABORATION PORTAL
+          </span>
           <button class="navbar-toggler text-white ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars"></i>
@@ -20,16 +23,31 @@
                 <i class="fa-solid fa-circle-plus"></i>
               </a>
               <!-- Dropdown menu -->
-              <ul class="dropdown-menu dropdown-menu-center border p-1" aria-labelledby="navbarDropdown" style="width:99%">
+              <ul class="dropdown-menu dropdown-menu-center dropdown-menu-dark border p-1" aria-labelledby="navbarDropdown" style="width:99%">
                 <li>
                   <a href="" class="dropdown-item small" type="button" data-bs-toggle="modal"
                    data-bs-target="#newRequisition">
-                    Create New Supplier
+                    Waybill
                   </a>
                 </li>
                 <li>
                   <a href="#" class="dropdown-item small" type="button">
-                    Create New RFQ
+                    Invoice
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item small" type="button">
+                    Payment Receipt
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item small" type="button">
+                    Certificate of <br>Completion
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item small" type="button">
+                    Add New User
                   </a>
                 </li>
               </ul>
@@ -44,15 +62,20 @@
               aria-expanded="false">
                 <i class="fa-solid fa-user"></i>
               </a>
-              <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown" style="width:99%;">
+              <ul class="dropdown-menu dropdown-menu-center dropdown-menu-dark" aria-labelledby="navbarDropdown" style="width:99%;">
                 <li>
                   <a href="#" class="dropdown-item small">
-                   Admin Profile
+                   Company Profile
                   </a>
                 </li>
                 <li>
-                  <a href="#passwordReset" class="dropdown-item small" data-bs-toggle="modal">
-                   Add New Admin User
+                  <a href="#" class="dropdown-item small" data-bs-toggle="modal">
+                   User Profile
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item small" data-bs-toggle="modal">
+                   Change Password
                   </a>
                 </li>
                 <li>
@@ -67,53 +90,11 @@
     <!-- Container wrapper -->
     </div>
   </div>
-  <div class="modal" tabindex="-1" id="newRequisition" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-body new-requisition">
-          <div class="">
-            <div class="mx-4 mb-5 py-5">
-              <p class="fw-bold text-center" style="font-size:20px">
-                Add New Requisition
-              </p>
-              <div class="">
-                <requisitionForm/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" tabindex="-1" id="passwordReset" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body new-requisition">
-          <div class="">
-            <div class="mx-4 mb-2 py-3">
-              <p class="fw-bold text-center" style="font-size:20px">
-                User Password Change
-              </p>
-              <div class="">
-                <password-reset></password-reset>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
-import requisitionForm from '@/components/RequisitionForm.vue'
-import passwordReset from '@/components/PasswordChange.vue'
 export default {
-  name: 'nav-header',
-  components: {
-    requisitionForm,
-    passwordReset
-  }
+
 }
 </script>
 
@@ -127,7 +108,7 @@ export default {
   z-index: 1002;
 }
 .navbar-dark, .navbar-header .navbar-collapse {
-  background-color: rgb(9, 168, 197);
+  background-color: rgb(0, 0, 0);
   color: #fff;
 }
 .navbar-brand, .title {
@@ -137,16 +118,7 @@ export default {
   text-decoration: none;
 }
 #navItem {
-  border-left: 1px solid #fff;
+  border-left: 1px solid #ccc;
   width: 33.33%
 }
-.modal .new-requisition {
-  background-color: #f8f8f8;
-}
-/*@media (max-height: 768px){
-  .navbar-header .navbar-nav {
-    display: flex;
-    flex-direction: column;
-  }
-}*/
 </style>

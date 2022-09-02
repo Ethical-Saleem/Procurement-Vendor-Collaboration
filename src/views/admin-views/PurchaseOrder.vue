@@ -1,5 +1,14 @@
 <template>
-  <Header></Header>
+  <Header>
+    <template #brand>
+      <span class="navbar-brand text-white"><i class="fa-solid fa-house"></i></span>
+      <span class="navbar-text title text-white">
+        <router-link :to="{name: 'admin-dashboard'}">
+          PROCUREMENT ADMIN PORTAL
+        </router-link>
+      </span>
+    </template>
+  </Header>
   <navbar></navbar>
   <div class="main-content">
     <div class="container-fluid">
@@ -13,7 +22,9 @@
       >
       <template #cell(purchase_code)="data">
         <div class="">
-          {{data.item.purchase_code}}
+          <router-link class="route-link" :to="'/purchase-order/' + data.item.purchase_code">
+            {{data.item.purchase_code}}
+          </router-link>
         </div>
       </template>
       <template #cell(description)="data">
@@ -97,21 +108,21 @@ export default {
           status: 'Pending'
         },
         {
-          purchase_code: 'PO423547',
+          purchase_code: 'PO423092',
           description: 'Supply of Printers',
           posting_date: '2022-01-28',
           order_date: '2022-02-05',
           status: 'Accepted'
         },
         {
-          purchase_code: 'PO423547',
+          purchase_code: 'PO421010',
           description: 'Supply of Toileteries',
           posting_date: '2022-01-28',
           order_date: '2022-02-05',
           status: 'Pending'
         },
         {
-          purchase_code: 'PO423547',
+          purchase_code: 'PO423548',
           description: 'Supply of Furnitures',
           posting_date: '2022-01-28',
           order_date: '2022-02-05',
@@ -123,6 +134,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.route-link {
+  text-decoration: none;
+  color: #000;
+}
 </style>

@@ -1,5 +1,14 @@
 <template>
-  <Header></Header>
+  <Header>
+    <template #brand>
+      <span class="navbar-brand text-white"><i class="fa-solid fa-house"></i></span>
+      <span class="navbar-text title text-white">
+        <router-link :to="{name: 'admin-dashboard'}">
+          PROCUREMENT ADMIN PORTAL
+        </router-link>
+      </span>
+    </template>
+  </Header>
   <navbar></navbar>
   <div class="container-fluid main-content">
     <div class="container-fluid my-3 header px-0">

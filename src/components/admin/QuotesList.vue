@@ -2,7 +2,9 @@
   <b-table responsive bordered hover :items="quotes" :fields="fields" >
     <template #cell(bid_num)="data">
       <div @click="display(data.item)" class="bid-num">
-        <a href="" class=""><span class="">{{ data.item.bid_num }}</span></a>
+        <router-link :to="'/request-for-quotes/' + data.item.bid_num">
+          <span class="">{{ data.item.bid_num }}</span>
+        </router-link>
       </div>
     </template>
     <template #cell(supplier_name)="data">

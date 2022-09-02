@@ -1,5 +1,14 @@
 <template>
-  <Header></Header>
+  <Header>
+    <template #brand>
+      <span class="navbar-brand text-white"><i class="fa-solid fa-house"></i></span>
+      <span class="navbar-text title text-white">
+        <router-link :to="{name: 'admin-dashboard'}">
+          PROCUREMENT ADMIN PORTAL
+        </router-link>
+      </span>
+    </template>
+  </Header>
   <navbar></navbar>
   <div class="container-fluid main-content">
     <div class="row">
@@ -20,7 +29,7 @@
         </li>
         <li class="nav-item fw-bold mx-3">
           <a class="nav-link" @click.prevent="setActive('userPermissions')" :class="{ active: isActive('userPermissions') }"
-           id="accepted-reqs" href="#userPErmissions" role="tab"
+           id="accepted-reqs" href="#userPermissions" role="tab"
            aria-controls="new-supplier" aria-selected="false">
             User Permissions
           </a>

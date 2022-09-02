@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import AdminDashboard from '../views/admin-views/AdminDashboard'
+import VendorDashboard from '../views/vendor-views/VendorDashboard'
 import SiteAdmin from '../views/admin-views/SiteAdministration.vue'
 import SignIn from '../views/AccountSignin.vue'
 import TeamRequisitions from '../views/user-views/TeamsRequisitions.vue'
@@ -6,6 +8,16 @@ import TeamRequisitions from '../views/user-views/TeamsRequisitions.vue'
 const routes = [
   {
     path: '/',
+    name: 'admin-dashboard',
+    component: AdminDashboard
+  },
+  {
+    path: '/vendor-dashboard',
+    name: 'vendor-dashboard',
+    component: VendorDashboard
+  },
+  {
+    path: '/site-administration',
     name: 'site-administration',
     component: SiteAdmin
   },
@@ -48,14 +60,20 @@ const routes = [
     component: () => import(/* webpackChunkName: "create-new-rfq" */ '../views/admin-views/CreateNewRfq.vue')
   },
   {
-    path: '/request-for-quotes/rfq-full-detail',
+    path: '/request-for-quotes/:bid_num',
     name: 'RfqFullDetail',
-    component: () => import(/* webpackChunkName: "RfqFullDetail" */ '../views/admin-views/RfqFullDetails.vue')
+    component: () => import(/* webpackChunkName: "RfqFullDetail" */ '../views/admin-views/RfqFullDetails.vue'),
+    props: true
   },
   {
     path: '/request-for-quotes/vendor-bid-detail',
     name: 'VendorBidDetail',
     component: () => import(/* webpackChunkName: "VendorBidDetail" */ '../views/admin-views/VendorBidDetails.vue')
+  },
+  {
+    path: '/purchase-order/:purchase_code',
+    name: 'PurchaseOrderDetail',
+    component: () => import(/* webpackChunkName: "PurchaseOrderDetail" */ '../views/admin-views/PurchaseOrderDetail.vue')
   },
   {
     path: '/team-requisitions',
