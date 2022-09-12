@@ -22,7 +22,7 @@
       >
       <template #cell(purchase_code)="data">
         <div class="">
-          <router-link class="route-link" :to="'/purchase-order/' + data.item.purchase_code">
+          <router-link class="route-link" :to="{ name: 'PurchaseOrderDetail', params:{purchase_code: data.item.purchase_code} }">
             {{data.item.purchase_code}}
           </router-link>
         </div>

@@ -43,9 +43,14 @@
       </div>
     </div>
     <div class="redirect-btn float-end">
-      <a href="" class="btn btn-sm px-3 rgbButton">
+      <!--<router-link :to="{name: 'RfqFullDetail'}">-->
+      <button
+      class="btn btn-sm px-3 rgbButton"
+      @click="$router.go(-1)"
+      >
         Close
-      </a>
+      </button>
+      <!--</router-link>-->
     </div>
   </div>
   <div class="">
@@ -91,6 +96,11 @@ export default {
     return {
       vendorName: 'XYZ Corporations',
       vendorAddress: 'Ikeja, Lagos, Nigeria'
+    }
+  },
+  methods: {
+    returnToDetails () {
+      this.$route.push('/request-for-quotes/vendor-bid-details')
     }
   }
 }

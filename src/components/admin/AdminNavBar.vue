@@ -10,22 +10,22 @@
         <div class="collapse navbar-collapse" id="sideNav">
           <ul class="navbar-nav w-100 justify-content-between mx-2" id="sideNav">
             <li class="nav-item">
-              <router-link to="/site-administration" class="nav-link fw-bold">SITE ADMINISTRATION</router-link>
+              <router-link :to="{name: 'SiteAdministration'}" class="nav-link fw-bold">SITE ADMINISTRATION</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/vendors-administration" class="nav-link fw-bold">VENDORS</router-link>
+              <router-link :to="{name: 'VendorsAdministration'}" class="nav-link fw-bold">VENDORS</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/purchase-requisitions" class="nav-link fw-bold">PURCHASE REQUISITIONS</router-link>
+              <router-link :to="{name: 'PurchaseRequisitions'}" class="nav-link fw-bold">PURCHASE REQUISITIONS</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/request-for-quotes" class="nav-link fw-bold">REQUEST FOR QUOTES</router-link>
+              <router-link :to="{name: 'RequestForQuotes'}" class="nav-link fw-bold">REQUEST FOR QUOTES</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/purchase-order" class="nav-link fw-bold">PURCHASE ORDER</router-link>
+              <router-link :to="{name: 'PurchaseOrder'}" class="nav-link fw-bold">PURCHASE ORDER</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/purchase-document" class="nav-link fw-bold">PURCHASE DOCUMENT</router-link>
+              <router-link :to="{name: 'PurchaseDocument'}" class="nav-link fw-bold">PURCHASE DOCUMENT</router-link>
             </li>
           </ul>
         </div>

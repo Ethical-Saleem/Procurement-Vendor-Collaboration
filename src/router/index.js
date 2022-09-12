@@ -18,7 +18,7 @@ const routes = [
   },
   {
     path: '/site-administration',
-    name: 'site-administration',
+    name: 'SiteAdministration',
     component: SiteAdmin
   },
   {
@@ -28,30 +28,36 @@ const routes = [
   },
   {
     path: '/vendors-administration',
-    name: 'vendors-administration',
+    name: 'VendorsAdministration',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "vendors-administration" */ '../views/admin-views/VendorsAdministration.vue')
+    component: () => import(/* webpackChunkName: "VendorsAdministration" */ '../views/admin-views/VendorsAdministration.vue')
+  },
+  {
+    path: '/vendor-profile/:company_name',
+    name: 'VendorProfile',
+    component: () => import(/* webpackChunkName: "VendorAdministration" */ '../views/admin-views/VendorProfile.vue'),
+    props: true
   },
   {
     path: '/purchase-requisitions',
-    name: 'purchase-requisitions',
-    component: () => import(/* webpackChunkName: "purchase-requisitions" */ '../views/admin-views/PurchaseRequisitions.vue')
+    name: 'PurchaseRequisitions',
+    component: () => import(/* webpackChunkName: "PurchaseRequisitions" */ '../views/admin-views/PurchaseRequisitions.vue')
   },
   {
     path: '/request-for-quotes',
-    name: 'request-for-quotes',
-    component: () => import(/* webpackChunkName: "request-for-quotes" */ '../views/admin-views/RequestForQuotes.vue')
+    name: 'RequestForQuotes',
+    component: () => import(/* webpackChunkName: "RequestForQuotes" */ '../views/admin-views/RequestForQuotes.vue')
   },
   {
     path: '/purchase-order',
-    name: 'purchase-order',
-    component: () => import(/* webpackChunkName: "purchase-order" */ '../views/admin-views/PurchaseOrder.vue')
+    name: 'PurchaseOrder',
+    component: () => import(/* webpackChunkName: "PurchaseOrder" */ '../views/admin-views/PurchaseOrder.vue')
   },
   {
     path: '/purchase-document',
-    name: 'purchase-document',
+    name: 'PurchaseDocument',
     component: () => import(/* webpackChunkName: "purchase-document" */ '../views/admin-views/PurchaseDocument.vue')
   },
   {
@@ -66,7 +72,7 @@ const routes = [
     props: true
   },
   {
-    path: '/request-for-quotes/vendor-bid-detail',
+    path: '/request-for-quotes/vendor-bid-detail/:vendor_name?',
     name: 'VendorBidDetail',
     component: () => import(/* webpackChunkName: "VendorBidDetail" */ '../views/admin-views/VendorBidDetails.vue')
   },

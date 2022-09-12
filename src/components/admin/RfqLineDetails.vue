@@ -28,7 +28,7 @@
         :items="requestDetails"
         >
           <template #cell(quantity)="data">
-            <div class="">
+            <div class="" contenteditable>
               {{data.item.quantity}}
             </div>
           </template>
@@ -43,7 +43,7 @@
             </div>
           </template>
           <template #cell(description)="data">
-            <div class="">
+            <div class="" contenteditable>
               {{data.item.description}}
             </div>
           </template>

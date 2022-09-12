@@ -97,6 +97,19 @@ li.file-list {
   margin: 8px 0px;
   cursor: pointer;
 }
+
+li.file-list:hover {
+  background-color: rgb(9, 168, 197);
+  color: #fff;
+}
+li.file-list:hover .upload-area i {
+  font-size: 30px;
+  color: #fff;
+}
+li.file-list:hover .upload-area .details span {
+  color: #fff;
+  font-weight: 400;
+}
 .upload-area i {
   font-size: 30px;
   color: rgb(9, 168, 197);

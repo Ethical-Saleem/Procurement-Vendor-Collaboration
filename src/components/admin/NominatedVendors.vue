@@ -28,7 +28,9 @@
           </template>
           <template #cell(vendor_name)="data">
             <div class="">
-              {{data.item.vendor_name}}
+              <router-link :to="{ name: 'VendorBidDetail', params:{vendor_name: data.item.vendor_name} }">
+                {{data.item.vendor_name}}
+              </router-link>
             </div>
           </template>
           <template #cell(invitation_status)="data">

@@ -45,7 +45,7 @@ export default {
           label: 'Action'
         }
       ],
-      purchseInvoices: []
+      purchaseInvoices: []
     }
   }
 }

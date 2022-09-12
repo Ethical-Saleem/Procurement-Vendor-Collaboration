@@ -2,7 +2,7 @@
   <b-table responsive bordered hover :items="quotes" :fields="fields" >
     <template #cell(bid_num)="data">
       <div @click="display(data.item)" class="bid-num">
-        <router-link :to="'/request-for-quotes/' + data.item.bid_num">
+        <router-link :to="{name: 'RfqFullDetail', params:{bid_num: data.item.bid_num} }">
           <span class="">{{ data.item.bid_num }}</span>
         </router-link>
       </div>
