@@ -15,9 +15,12 @@
   border-bottom: 4px solid rgb(9, 168, 197);
 }
 .main-content {
-  padding-top: 105px;
+  padding-top: 120px;
   overflow-x: auto;
   font-size: 16px;
+}
+.action-nav {
+  background-color: #dadada;
 }
 a {
   text-decoration: none;

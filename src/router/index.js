@@ -93,6 +93,56 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "user-requisitions" */ '@/views/user-views/UserRequisitions.vue')
+  },
+  {
+    path: '/requests-for-quotes',
+    name: 'VendorRequestForQuotes',
+    component: () => import(/* webpackChunkName: "VendorRequestForQuotes" */ '../views/vendor-views/RequestForQuotes.vue')
+  },
+  {
+    path: '/bid-purchase-orders',
+    name: 'VendorPurchaseOrders',
+    component: () => import(/* webpackChunkName: "VendorPurchaseOrders" */ '../views/vendor-views/VendorPurchaseOrder.vue')
+  },
+  {
+    path: '/issue-resolution',
+    name: 'IssueResolution',
+    component: () => import(/* webpackChunkName: "IssueResolution" */ '../views/vendor-views/IssueResolution.vue')
+  },
+  {
+    path: '/personal-information',
+    name: 'VendorPersonalDetails',
+    component: () => import(/* webpackChunkName: "PersonalInformation" */ '../views/vendor-views/VendorProfile.vue')
+  },
+  {
+    path: '/add-new-user',
+    name: 'AddNewUser',
+    component: () => import(/* webpackChunkName: "PersonalInformation" */ '../views/vendor-views/AddNewUser.vue')
+  },
+  {
+    path: '/change-password',
+    name: 'ChangePassword',
+    component: () => import(/* webpackChunkName: "PersonalInformation" */ '../views/vendor-views/ChangePassword.vue')
+  },
+  {
+    path: '/requests-for-quotes/:bid_num',
+    name: 'BidInvitationDetails',
+    component: () => import(/* webpackChunkName: "VendorRequestForQuotes" */ '../views/vendor-views/BidInvitationDetails.vue')
+  },
+  {
+    path: '/requests-for-quotes/:bid_num/bid-invitation-upload',
+    name: 'BidInvitationUploads',
+    component: () => import(/* webpackChunkName: "VendorRequestForQuotes" */ '../views/vendor-views/BidInvitationUploads.vue')
+  },
+  {
+    path: '/bid-purchase-orders/:purchase_code',
+    name: 'BidPurchaseOrder',
+    component: () => import(/* webpackChunkName: "VendorPurchaseOrders" */ '../views/vendor-views/BidPurchaseOrder.vue')
+  },
+  {
+    path: '/bid-purchase-orders/:purchase_code/confirmed-purchase-order',
+    name: 'ConfirmedBidPurchaseOrder',
+    component: () => import(/* webpackChunkName: "VendorPurchaseOrders" */ '../views/vendor-views/ConfirmedBidPurchaseOrder.vue')
   }
 ]
 

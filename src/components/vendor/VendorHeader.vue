@@ -46,9 +46,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="dropdown-item small" type="button">
+                  <router-link :to="{name: 'AddNewUser'}" class="dropdown-item small" type="button">
                     Add New User
-                  </a>
+                  </router-link>
                 </li>
               </ul>
             </li>
@@ -69,14 +69,14 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="dropdown-item small" data-bs-toggle="modal">
-                   User Profile
-                  </a>
+                  <router-link :to="{name: 'VendorPersonalDetails'}" class="dropdown-item small">
+                    User Profile
+                  </router-link>
                 </li>
                 <li>
-                  <a href="#" class="dropdown-item small" data-bs-toggle="modal">
-                   Change Password
-                  </a>
+                  <router-link :to="{name: 'ChangePassword'}" class="dropdown-item small">
+                    Change Password
+                  </router-link>
                 </li>
                 <li>
                   <router-link to="/Sign-in" class="dropdown-item small">Sign out</router-link>

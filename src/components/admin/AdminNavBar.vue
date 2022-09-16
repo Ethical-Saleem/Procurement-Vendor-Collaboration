@@ -45,6 +45,7 @@ export default {
   margin-top: 60px;
   position: fixed;
   margin-top: 60px;
+  height: 50px;
   left: 0;
   right: 0;
   z-index: 100;

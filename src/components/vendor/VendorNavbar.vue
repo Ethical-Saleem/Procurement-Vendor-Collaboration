@@ -13,16 +13,16 @@
               <router-link :to="{name: 'vendor-dashboard'}" class="nav-link">DASHBOARD</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/vendors-administration" class="nav-link">REQUEST FOR QUOTES</router-link>
+              <router-link :to="{name: 'VendorRequestForQuotes'}" class="nav-link">REQUEST FOR QUOTES</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/purchase-requisitions" class="nav-link">PURCHASE ORDER</router-link>
+              <router-link :to="{name: 'VendorPurchaseOrders'}" class="nav-link">PURCHASE ORDER</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/request-for-quotes" class="nav-link">ISSUE RESOLUTION</router-link>
+              <router-link :to="{name: 'IssueResolution'}" class="nav-link">ISSUE RESOLUTION</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/purchase-order" class="nav-link">PROFILE</router-link>
+              <router-link :to="{name: 'VendorPersonalDetails'}" class="nav-link">PROFILE</router-link>
             </li>
           </ul>
         </div>
@@ -42,9 +42,21 @@ export default {
   margin-top: 60px;
   position: fixed;
   margin-top: 60px;
+  height: 40px;
   left: 0;
   right: 0;
   z-index: 100;
+}
+@media(max-height:750px) {
+  .secondNav {
+  margin-top: 60px;
+  position: fixed;
+  margin-top: 60px;
+  height: 30px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  }
 }
 .secondNav .navbar {
   background-color: rgb(9, 168, 197);
